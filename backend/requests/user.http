@@ -1,0 +1,23 @@
+POST http://localhost:3333/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "first4@email.com",
+  "password": "password",
+  "username": "first name 2"
+}
+###
+
+GET http://localhost:3333/users HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjYsImlhdCI6MTYwMTM1MDE5NX0.ztoO55dIbMAwyLrGPh7jJXKQ96OFGnuYhGAAdKiHB0o
+###
+
+PUT http://localhost:3333/users/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjYsImlhdCI6MTYwMTM1MDE5NX0.ztoO55dIbMAwyLrGPh7jJXKQ96OFGnuYhGAAdKiHB0o
+
+{
+  "email": "first3@email.com",
+  "username": "first name 3 alterado"
+}
